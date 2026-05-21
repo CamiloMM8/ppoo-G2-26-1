@@ -4,7 +4,7 @@ import java.util.UUID;
 
 
 //@Entity
-// lommbook
+// lommbook  @Builder
 public class Student {
 
     private UUID Id;
