@@ -1,9 +1,10 @@
 package com.example.tutoria002.models;
 
 import java.util.UUID;
+import jakarta.persistence.Entity;
 
 
-//@Entity
+@Entity
 // lommbook  @Builder
 public class Student {
 
