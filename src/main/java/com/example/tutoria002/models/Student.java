@@ -10,69 +10,69 @@ import jakarta.persistence.Id;
 public class Student {
 
     @Id
-    private UUID Id;
-    private String DocumentNumber;
-    private String StudentCode;
-    private String Email;
-    private String Names;
-    private String LastName;
-    private boolean IsActive;
+    private UUID id;
+    private String documentNumber;
+    private String studentCode;
+    private String email;
+    private String names;
+    private String lastName;
+    private boolean isActive;
 
     // get set
-    public String GetDocumentNumber(){
-        return DocumentNumber;
+    public String getDocumentNumber(){
+        return documentNumber;
     }
 
-    public void SetDocumentNumber(String  DocumentNumber){
-        this.DocumentNumber = DocumentNumber;
+    public void setDocumentNumber(String documentNumber){
+        this.documentNumber =documentNumber;
     }
 
     public UUID getId() {
-        return Id;
+        return id;
     }
 
     public void setId(UUID id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getStudentCode() {
-        return StudentCode;
+        return studentCode;
     }
 
     public void setStudentCode(String studentCode) {
-        StudentCode = studentCode;
+       this.studentCode = studentCode;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getNames() {
-        return Names;
+        return names;
     }
 
     public void setNames(String names) {
-        Names = names;
+        this.names = names;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public boolean isIsActive() {
-        return IsActive;
+        return isActive;
     }
 
     public void setIsActive(boolean isActive) {
-        IsActive = isActive;
+        this.isActive = isActive;
     }
     
 }
