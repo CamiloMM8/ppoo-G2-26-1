@@ -2,12 +2,14 @@ package com.example.tutoria002.models;
 
 import java.util.UUID;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 
 @Entity
 // lommbook  @Builder
 public class Student {
 
+    @Id
     private UUID Id;
     private String DocumentNumber;
     private String StudentCode;
