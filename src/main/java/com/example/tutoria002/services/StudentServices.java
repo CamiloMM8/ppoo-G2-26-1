@@ -18,7 +18,7 @@ public class StudentServices {
     }
 
     public Student save(Student student){
-        return !existStudent(student.getId()) ? studentRepository.save(student) : null;
+        return studentRepository.save(student);
     }
 
     public Student update(Student student){
@@ -29,5 +29,13 @@ public class StudentServices {
         return studentRepository.findById(id).isEmpty() ? false : true;
     }
 
+    
+    public boolean delete(UUID id){
+        if (!studentRepository.existsById(id)) {
+            return false;
+        }
+        studentRepository.deleteById(id);
+        return true;
+    }
 
 }

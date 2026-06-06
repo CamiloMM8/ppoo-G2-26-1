@@ -1,78 +1,54 @@
 package com.example.tutoria002.models;
 
 import java.util.UUID;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-// lommbook  @Builder.
+@Getter
+@Setter
+@ToString
 public class Student {
 
     @Id
+    @GeneratedValue
     private UUID id;
+
+    @NotBlank
+    @Size(max = 20)
+    @Column(length = 20, nullable = false)
     private String documentNumber;
+
+    @NotBlank
+    @Size(max = 20)
+    @Column(length = 20, nullable = false, unique = true)
     private String studentCode;
+
+    @NotBlank
+    @Email
+    @Size(max = 100)
+    @Column(length = 100, nullable = false, unique = true)
     private String email;
+
+    @NotBlank
+    @Size(max = 100)
+    @Column(length = 100, nullable = false)
     private String names;
+
+    @NotBlank
+    @Size(max = 100)
+    @Column(length = 100, nullable = false)
     private String lastName;
+
     private boolean isActive;
 
-    // get set
-    public String getDocumentNumber(){
-        return documentNumber;
-    }
-
-    public void setDocumentNumber(String documentNumber){
-        this.documentNumber =documentNumber;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getStudentCode() {
-        return studentCode;
-    }
-
-    public void setStudentCode(String studentCode) {
-       this.studentCode = studentCode;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getNames() {
-        return names;
-    }
-
-    public void setNames(String names) {
-        this.names = names;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public boolean isIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(boolean isActive) {
-        this.isActive = isActive;
-    }
-    
 }

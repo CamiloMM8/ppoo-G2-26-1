@@ -1,10 +1,13 @@
 package com.example.tutoria002.controllers;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,6 +37,11 @@ public class StudentController {
     @PutMapping
     public ResponseEntity<Student> update(@RequestBody Student student ){
         return ResponseEntity.ok(studentServices.update(student));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Boolean> delete(@PathVariable UUID id){
+        return ResponseEntity.ok(studentServices.delete(id));
     }
     
 }
