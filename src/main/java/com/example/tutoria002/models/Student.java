@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 
 
 @Entity
-// lommbook  @Builder
+// lommbook  @Builder.
 public class Student {
 
     @Id
