@@ -1,0 +1,25 @@
+Integrantes:
+Juan Camilo Marquez Marroquin 
+Sebastian Garcia
+Giovanny Ciro
+Luisa Machado
+
+Se cumplieron con los puntos de la convocatoria como
+
+- Crear Docente.
+
+- Obtener todos los docentes creados.
+
+- Actualizar Docente.
+
+- Eliminar Docente.
+
+- Longitud de campos
+
+- Se uso Lombok
+
+- Se agrego excepción cuando un tipo de documento y número de documento sea igual
+
+- Se uso la libreria swagger para la explicación.
+
+- Se uso excepciones globales para otros tipos de errores.
